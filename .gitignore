@@ -1,0 +1,104 @@
+# Dependencies
+/vendor/
+/node_modules/
+npm-debug.log
+yarn-error.log
+
+# Environment files
+.env
+.env.backup
+.env.production
+
+# Laravel storage and cache
+/public/hot
+/public/storage
+/public/build
+/public/css
+/public/js
+/public/mix-manifest.json
+/storage/*.key
+/storage/pail
+/storage/framework/cache/*
+!/storage/framework/cache/.gitkeep
+/storage/framework/sessions/*
+!/storage/framework/sessions/.gitkeep
+/storage/framework/testing/*
+!/storage/framework/testing/.gitkeep
+/storage/framework/views/*
+!/storage/framework/views/.gitkeep
+/storage/logs/*
+!/storage/logs/.gitkeep
+
+# Bootstrap cache
+/bootstrap/cache/*
+!/bootstrap/cache/.gitkeep
+
+# IDE and editor files
+/.idea
+/.vscode
+/.fleet
+/.nova
+/.zed
+*.sublime-project
+*.sublime-workspace
+/.buildpath
+/.project
+/.settings
+/nbproject/
+
+# PHP and testing
+.phpactor.json
+.phpunit.result.cache
+/.phpunit.cache
+/coverage
+/build
+
+# Composer
+composer.phar
+/auth.json
+
+# NPM / Yarn
+package-lock.json
+yarn.lock
+
+# Homestead / Vagrant
+Homestead.yaml
+Homestead.json
+/.vagrant
+
+# Docker
+docker-compose.override.yml
+/.docker
+
+# MacOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# Database
+*.sqlite
+*.sqlite-journal
+
+# Log files
+*.log
+
+# Backup and temporary files
+*.bak
+*.swp
+*.swo
+
+# Compiled files
+*.class
+*.dll
+*.exe
+*.o
+*.so
