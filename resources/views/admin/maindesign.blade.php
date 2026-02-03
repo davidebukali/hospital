@@ -211,7 +211,14 @@
                       </div>
                     </div>
                     <div class="preview-item-content">
-                      <p class="preview-subject mb-1">Log out</p>
+                      <form method="POST" action="{{ route('logout') }}" id="logout-form">
+    @csrf
+    <p class="preview-subject mb-1" 
+       onclick="event.preventDefault(); document.getElementById('logout-form').submit();" 
+       style="cursor: pointer;">
+        Log out
+    </p>
+</form>
                     </div>
                   </a>
                 </div>
