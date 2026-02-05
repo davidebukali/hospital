@@ -93,7 +93,9 @@
 
 
                         @else
-
+<li>
+                            <a class="" href="{{ route('dashboard') }}">Dashboard</a>
+                        </li>
 
                         <li class="nav-item">
                             <!-- Authentication -->
