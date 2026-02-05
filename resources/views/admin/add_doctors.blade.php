@@ -1,13 +1,20 @@
 @extends('admin.maindesign')
 
 @section('add_doctors')
+<div class="container">
+    @if(session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
+</div>
     <div class="row">
         <div class="col-md-8 col-lg-6">
             <div class="card">
                 <div class="card-body">
                     <h4 class="card-title">Add New Doctor</h4>
                     <p class="card-description">Fill in the doctor's information</p>
-                    <form action="" method="post" enctype="multipart/form-data" class="forms-sample">
+                    <form action="{{ route('post_doctors') }}" method="post" enctype="multipart/form-data" class="forms-sample">
                         @csrf
                         <div class="form-group">
                             <label for="doctor_name">Doctor Name</label>
