@@ -10,7 +10,7 @@ Route::get('/', [UserController::class, 'Index'])->name('index');
 Route::get('/dashboard', [UserController::class, 'Dashboard'])->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth', 'admin')->group(function () {
-    
+   Route::get('/add_doctors', [AdminController::class, 'AddDoctors'])->name('add_doctors'); 
 });
 
 Route::middleware('auth')->group(function () {
