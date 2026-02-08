@@ -72,13 +72,13 @@
                 <div class="collapse navbar-collapse" id="navbarSupport">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Home</a>
+                            <a class="nav-link" href="{{ route('index') }}">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="about.html">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="doctors.html">Doctors</a>
+                            <a class="nav-link" href="{{ route('alldoctors') }}">Doctors</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="blog.html">News</a>
@@ -87,42 +87,39 @@
                             <a class="nav-link" href="contact.html">Contact</a>
                         </li>
                         @if(!Auth::check())
-                            <li>
+                        <li>
                             <a class="" href="{{ route('login') }}">Login</a>
                         </li>
 
 
                         @else
-<li>
+                        <li>
                             <a class="" href="{{ route('dashboard') }}">Dashboard</a>
                         </li>
 
                         <li class="nav-item">
                             <!-- Authentication -->
-                        <form method="POST" action="{{ route('logout') }}">
-                            @csrf
+                            <form method="POST" action="{{ route('logout') }}">
+                                @csrf
 
-                            <x-dropdown-link :href="route('logout')"
-                                    onclick="event.preventDefault();
+                                <x-dropdown-link :href="route('logout')" onclick="event.preventDefault();
                                                 this.closest('form').submit();">
-                                {{ __('Log Out') }}
-                            </x-dropdown-link>
-                        </form>
+                                    {{ __('Log Out') }}
+                                </x-dropdown-link>
+                            </form>
                         </li>
 
-                        @endif                        
+                        @endif
                     </ul>
                 </div> <!-- .navbar-collapse -->
             </div> <!-- .container -->
         </nav>
     </header>
 
-    <!-- Hero Content -->
-    @yield('')
+    @yield('index_page')
 
     <!-- Doctors section -->
-
-    @yield('index_page')
+    @yield('all_doctors')
 
     <div class="page-section bg-light">
         <div class="container">
