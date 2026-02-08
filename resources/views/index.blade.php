@@ -7,6 +7,7 @@
     <div class="container">
         <h1 class="text-center mb-5 wow fadeInUp">Our Doctors</h1>
 
+        @if($doctors->count() > 0)
         <div class="owl-carousel wow fadeInUp" id="doctorSlideshow">
             @foreach ($doctors as $doctor)
             <div class="item">
@@ -26,6 +27,11 @@
             </div>
             @endforeach
         </div>
+        @else
+        <div class="text-center wow fadeInUp">
+            <p class="text-grey">No doctors available at the moment. Please check back later.</p>
+        </div>
+        @endif
     </div>
 </div>
 @endsection
