@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [UserController::class, 'Index'])->name('index');
+Route::post('/appointment', [UserController::class, 'MakeAnAppointment'])->name('appointment');
 Route::get('/alldoctors', [UserController::class, 'allDoctors'])->name('alldoctors');
 
 Route::get('/dashboard', [UserController::class, 'Dashboard'])->middleware(['auth', 'verified'])->name('dashboard');
