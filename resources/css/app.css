@@ -1,3 +1,7 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
+
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+  color: white;
+}

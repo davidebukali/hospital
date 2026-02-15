@@ -14,6 +14,7 @@ Route::get('/dashboard', [UserController::class, 'Dashboard'])->middleware(['aut
 Route::middleware('auth', 'admin')->group(function () {
    Route::get('/add_doctors', [AdminController::class, 'AddDoctors'])->name('add_doctors');
    Route::post('/post_doctors', [AdminController::class, 'PostDoctors'])->name('post_doctors');
+   Route::get('/view_doctors', [AdminController::class, 'ViewDoctors'])->name('view_doctors');
 });
 
 Route::middleware('auth')->group(function () {
