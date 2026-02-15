@@ -153,6 +153,7 @@
       <div class="main-panel">
         @yield('add_doctors')
         @yield('view_doctors')
+        @yield('edit_doctor')
       </div>
     </div>
     <!-- page-body-wrapper ends -->

@@ -13,6 +13,7 @@
                             <th> Doctor Speciality </th>
                             <th> Room Number </th>
                             <th> Doctor Image </th>
+                            <th> Action </th>
                         </tr>
                     </thead>
                     <tbody style="color: white;">
@@ -23,6 +24,11 @@
                             <td> {{ $doctor->doctor_speciality }} </td>
                             <td> {{ $doctor->room_number }} </td>
                             <td> <img src="{{ asset('doctor_images/' . $doctor->doctor_image) }}" alt="">
+                            </td>
+                            <td>
+                                <a href="{{ route('edit_doctor', $doctor->id) }}" class="btn btn-primary">Edit</a>
+                                <a href="{{ route('delete_doctor', $doctor->id) }}" class="btn btn-danger"
+                                    onclick="return confirm('Are you sure?')">Delete</a>
                             </td>
                         </tr>
                         @endforeach
